@@ -1,0 +1,15 @@
+<md-toolbar color="primary">
+	{{title}}
+</md-toolbar>
+
+<div class="app-content">
+
+	<app-login titleMessage="Please log you to vote." (userLogged)="login($event)"></app-login>
+
+	<md-card>
+		<md-list>
+			<app-candidat-item *ngFor="let c of candidats" [candidat]="c" [user]="currentUser"></app-candidat-item>
+		</md-list>
+	</md-card>
+
+</div>

@@ -1,0 +1,18 @@
+<md-list-item>
+  <img md-list-avatar [src]="candidat.pic">
+  <h3 md-line> {{candidat.name}} {{candidat.firstname}} </h3>
+  <p md-line>
+    <span> {{candidat.slogan}} </span>
+  </p>
+  <span *ngIf="user">
+      <button md-raised-button 
+              *ngIf="user.candidat?.name != candidat.name"
+              [disabled]="user.candidat?.name" 
+              (click)="user.candidat = candidat" 
+              color="primary">Vote</button>
+      <button md-raised-button 
+              *ngIf="user.candidat?.name == candidat.name"
+              (click)="user.candidat = null" 
+              color="warn">Unvote</button>
+    </span>
+</md-list-item>

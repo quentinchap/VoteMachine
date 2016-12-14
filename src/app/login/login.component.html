@@ -1,0 +1,16 @@
+<div id="login">
+	
+	<button md-raised-button color="primary" *ngIf="!showForm" (click)="pressLoginButton()">Login</button>
+
+	<md-card *ngIf="showForm">
+		<md-card-content>
+			<p>{{titleMessage}}</p>
+			<md-input [placeholder]="loginPlaceHolder" [(ngModel)]="user">
+			</md-input>
+		</md-card-content>
+		<md-card-actions align="end">
+			<button md-button color="primary" (click)="login()">Validate</button>
+			<button md-button color="secondary" (click)="cancelLogin()">Cancel</button>
+		</md-card-actions>
+	</md-card>
+</div>

@@ -1,0 +1,18 @@
+#login{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+md-card{
+    width: 80%;
+    margin-left: 10%;
+}
+
+md-input{
+    margin-right: 10px;
+}
+
+button{
+    margin: auto;
+}
